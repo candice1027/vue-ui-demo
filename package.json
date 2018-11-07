@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/candice1027/vue-ui-demo#readme",
   "dependencies": {
+    "g": "^2.0.1",
+    "git-open": "^2.0.0",
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.1"
   },
@@ -33,7 +35,4 @@
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
   }
-
-
-
 }
