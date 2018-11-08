@@ -6,6 +6,14 @@
 </template>
 <script>
     export default {
+        mounted() {//mounted就是当dom出现在页面上之后执行的
+            for (let node of this.$el.children) {
+                if (node.nodeName.toLowerCase() !== 'button') {
+                    console.warn('g-button-group中的子元素应该全是button')
+                }
+            }
+           // console.log(this.$el.children) //打印出g-button-group的子元素
+        }
 
     }
 
