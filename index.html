@@ -32,9 +32,9 @@
 
 </style>
 <div id="app">
-    <g-button >无icon</g-button>
-    <g-button icon="setting" icon-position="left">设置按钮</g-button>
-    <g-button icon="setting" icon-position="right">设置按钮</g-button>
+    <g-button @click="loading1=!loading1" :loading="loading1">无icon</g-button>
+    <g-button @click="loading2=!loading2" icon="setting" icon-position="left" :loading="loading2">设置按钮</g-button>
+    <g-button @click="loading3=!loading3" icon="setting" icon-position="right" :loading="loading3">设置按钮</g-button>
     <g-icon   icon="down"></g-icon>
     <g-icon   icon="loading"></g-icon>
 </div>

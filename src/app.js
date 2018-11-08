@@ -7,6 +7,14 @@ Vue.component('g-icon',Icon);
 var vm = new Vue({
     el:'#app',
     data: {
-        name: 'vue demo'
+        name: 'vue demo',
+        loading1: false,
+        loading2: true,
+        loading3: true,
+    },
+    methods: {
+        changeStatus() {
+            console.log(this.loading1)
+        }
     }
 })
