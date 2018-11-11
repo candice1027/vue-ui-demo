@@ -102,5 +102,6 @@ const expect = chai.expect;
     let button = gbutton.$el;
     button.click();
     expect(spy).to.have.been.called(); //这一步就是 期望 间谍函数被调用
-
+    button.$el.remove(); //测试结束后，删除button组件下的所有元素
+    button.$destroy(); //销毁button实例
 }
