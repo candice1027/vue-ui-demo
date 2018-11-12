@@ -1,6 +1,6 @@
 {
   "name": "vue-gulu",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "a vue ui demo",
   "main": "index.js",
   "scripts": {
