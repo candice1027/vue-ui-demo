@@ -26,18 +26,25 @@
     body {
         font-size: var(--font-size);
     }
+    .wrap {
+        margin: 20px;
+
+    }
 </style>
 <style>
 
 
 </style>
 <div id="app">
-    <div>
-        <g-input value="张三李四"></g-input>
+    <div class="wrap">
+        <g-input value="张三李四" ></g-input>
+        <g-input value="张三李四" disabled ></g-input>
+        <g-input value="张三李四" readonly ></g-input>
     </div>
-
-        <div style="margin: 20px 0;">
-
+    <div class="wrap">
+        <g-input value="张三李四" error="姓名不能为空"></g-input>
+    </div>
+    <div class="wrap">
             <g-button @click="loading1=!loading1" :loading="loading1">无icon</g-button>
             <g-button @click="loading2=!loading2" icon="setting" icon-position="left" :loading="loading2">设置按钮</g-button>
             <g-button @click="loading3=!loading3" icon="setting" icon-position="right" :loading="loading3">设置按钮</g-button>
