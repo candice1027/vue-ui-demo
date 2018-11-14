@@ -19,6 +19,10 @@ var vm = new Vue({
     methods: {
         changeStatus() {
             console.log(this.loading1)
+        },
+        inputChange(e) {
+            console.log(e)
+            console.log('33333')
         }
     }
 })
