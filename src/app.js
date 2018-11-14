@@ -2,10 +2,12 @@ import Vue from 'vue';
 import Button from './button';
 import Icon from './icon';
 import ButtonGroup from './button-group';
+import Input from './input';
 
 Vue.component('g-button',Button);
 Vue.component('g-icon',Icon);
 Vue.component('g-button-group',ButtonGroup);
+Vue.component('g-input',Input);
 var vm = new Vue({
     el:'#app',
     data: {
@@ -102,6 +104,6 @@ const expect = chai.expect;
     let button = gbutton.$el;
     button.click();
     expect(spy).to.have.been.called(); //这一步就是 期望 间谍函数被调用
-    button.$el.remove(); //测试结束后，删除button组件下的所有元素
-    button.$destroy(); //销毁button实例
+    button.remove(); //测试结束后，删除button组件下的所有元素
+    gbutton.$destroy(); //销毁button实例
 }
