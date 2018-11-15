@@ -37,7 +37,8 @@
 </style>
 <div id="app">
     <div class="wrap">
-        <g-input value="张三李四" ></g-input>
+        <g-input value="张三李四" v-model="message"></g-input>
+        <p>{{message}}</p>
         <g-input value="张三李四" disabled ></g-input>
         <g-input value="张三李四" readonly ></g-input>
     </div>

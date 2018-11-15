@@ -72,18 +72,27 @@ describe('Input', () => {
             vm.$destroy()
         })
 
-        it('它支持change事件',() =>{e
-            vm = new Constructor({}).$mount();
-            const callback = sinon.fake();
-            //监听input change事件
-            vm.on('change',callback);
-            //触发input change事件
-            let event = new Event('change');
-            let inputElement = vm.$el.querySelector('input');
-            inputElement.dispatchEvent(event);
-            //expect(callback).to.have.been.called;
-            expect(callback).to.have.been.calledWidth(event);
-
+        it('它支持change/focus/blur/input事件',() =>{
+            ['input','change','focus','blur'].forEach((eventName) => {
+                vm = new Constructor({}).$mount();
+                const callback = sinon.fake();
+                //监听input change事件
+                vm.on(eventName,callback);
+                //触发input change事件
+                let event = new Event(eventName);
+                Object.defineProperty(
+                    event,
+                    'target',
+                    {
+                        value: {value: 'hi'},
+                        enumerable: true
+                    }
+                )
+                let inputElement = vm.$el.querySelector('input');
+                inputElement.dispatchEvent(event);
+                //expect(callback).to.have.been.called;
+                expect(callback).to.have.been.calledWidth(event);
+            })
         })
     })
 })

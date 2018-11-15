@@ -15,6 +15,7 @@ var vm = new Vue({
         loading1: false,
         loading2: true,
         loading3: true,
+        message:'Hi'
     },
     methods: {
         changeStatus() {
